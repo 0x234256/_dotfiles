@@ -8,12 +8,10 @@ dotfiles=(
 
   'tmux.conf'
   'vimrc'
-  'zshrc'
-  'zshenv'
+  'profile'
 
   'bin'
   'config'
-  'aria2'
 )
 
 pwd=`pwd`
@@ -44,10 +42,6 @@ done
 # # mkdir -p $HOME/.config
 # ln -s $pwd/.config/ $HOME/.config
 
-brew bundle install --file .backup/Brewfile
-# Some of the tools install via Homebrew might need additional manual steps.
-# It would be cool if this could be done as part of the Brefile run
-
 # Install Vim-Plug to manage Vim plugins
 # See https://github.com/junegunn/vim-plug/tree/c3b6b7c2971da730d66f6955d5c467db8dae536b#vim
 plug_git_url="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
@@ -58,17 +52,3 @@ if [[ -f "$vim_plug_path" ]]; then
 else
   curl -fLo "$vim_plug_path" --create-dirs "$plug_git_url" 
 fi
-
-# Hammerspoon window manager
-# http://www.hammerspoon.org/
-mkdir -p $HOME/.hammerspoon
-ln -s $pwd/.hammerspoon/init.lua $HOME/.hammerspoon/init.lua
-
-# .ssh
-# cp -r $pwd/.ssh/ $HOME/.ssh
-
-# System Config
-defaults -currentHost write -g AppleFontSmoothing -int 0
-defaults write com.apple.screencapture location $HOME/Pictures/ScreenShots
-defaults write com.apple.dock autohide -bool true
-

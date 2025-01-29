@@ -46,8 +46,8 @@ return {
         -- "rubocop",
         -- "ruby_lsp",
         -- "solargraph",
-        "pyright",
-        "lua_ls",
+        -- "pyright",
+        -- "lua_ls",
         -- "hydra_lsp",
       },
 

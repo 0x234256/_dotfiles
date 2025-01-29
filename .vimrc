@@ -90,8 +90,8 @@ vnoremap g[ :m '<-2<CR>gv=gv
 nnoremap g[ :m .-2<CR>==
 nnoremap g] :m .+1<CR>==
 vnoremap g] :m '>+1<CR>gv=gv
-inoremap g] <Esc>:m .+1<CR>==gi
-inoremap g[ <Esc>:m .-2<CR>==gi
+" inoremap g] <Esc>:m .+1<CR>==gi
+" inoremap g[ <Esc>:m .-2<CR>==gi
 
 " nnoremap <Leader>n :NERDTreeFocus<CR>
 " nnoremap <C-n> :NERDTree<CR>
@@ -140,7 +140,7 @@ function! ReselectAndComment()
 endfunction
 
 nnoremap g/ :call ReselectAndComment()<CR>
-inoremap g/ <Esc>:call ReselectAndComment()<CR>i
+" inoremap g/ <Esc>:call ReselectAndComment()<CR>i
 vnoremap g/ :Commentary<Bar>normal! gv<CR>
 
 call plug#begin()
@@ -148,6 +148,8 @@ Plug 'junegunn/vim-plug'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-commentary'
 Plug 'arzg/vim-colors-xcode'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "
