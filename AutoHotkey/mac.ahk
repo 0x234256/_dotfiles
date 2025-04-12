@@ -40,6 +40,7 @@ return
     #w::Send ^w
     #+[::Send ^+{Tab}
     #+]::Send ^{Tab}
+    #LButton::Send ^{LButton}
 #IfWinActive
 
 ; Discord Mute 

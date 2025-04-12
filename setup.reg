@@ -15,3 +15,7 @@ Windows Registry Editor Version 5.00
 ; Desativar exibição da versão do Windows na área de trabalho
 [HKEY_CURRENT_USER\Control Panel\Desktop]
 "PaintDesktopVersion"=dword:00000000
+
+; Permitir autenticação de convidado em compartilhamentos SMB (AllowInsecureGuestAuth)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters]
+"AllowInsecureGuestAuth"=dword:00000001
