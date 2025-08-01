@@ -11,7 +11,7 @@ dotfiles=(
   'profile'
 
   'bin'
-  'config'
+  # 'config'
 )
 
 pwd=`pwd`
@@ -29,6 +29,9 @@ do
   fi
 done
 
+sudo ln -s ~/_dotfiles/.vimrc /root/.vimrc
+sudo ln -s ~/.vim /root/.vim
+
 # # Link Vim spellfile.
 # # Not sure how to symlink and entire folder yet
 # mkdir -p ~/.vim/spell
@@ -37,10 +40,7 @@ done
 # ln -s $pwd/vim/spell/custom-spell.utf-8.add ~/.vim/spell/custom-spell.utf-8.add
 
 # # link folders
-# ln -s $pwd/.bin/ $HOME/.bin
-
-# # mkdir -p $HOME/.config
-# ln -s $pwd/.config/ $HOME/.config
+ln -s $pwd/.bin/ $HOME/.bin
 
 # Install Vim-Plug to manage Vim plugins
 # See https://github.com/junegunn/vim-plug/tree/c3b6b7c2971da730d66f6955d5c467db8dae536b#vim

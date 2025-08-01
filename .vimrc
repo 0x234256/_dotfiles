@@ -4,6 +4,9 @@ set ts=2 sw=2 sts=2 et
 " Define os caracteres especiais e suas representações
 set list
 
+set fileencoding=utf-8
+set encoding=utf-8
+
 " Space Char
 set listchars=tab:»\ ,eol:¬,extends:>,precedes:<,nbsp:_,space:∙,multispace:∙
 
@@ -25,8 +28,6 @@ set showmode
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
-set encoding=utf-8
-
 " Some servers have issues with backup files, see #649
 set nobackup
 set nowritebackup
@@ -102,9 +103,9 @@ vnoremap > >gv
 " Remap ESC and save on pinky travel time :)
 " inoremap kk <esc>
 
-" Map <Leader>, to save
 nnoremap <C-s> :w<CR>
 
+" Map <Leader>, to save
 " -- Move remaps
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -118,7 +119,7 @@ nnoremap N Nzzzv
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Source current file
-nnoremap <Leader><Leader> :so<CR>
+" nnoremap <Leader><Leader> :so<CR>
 
  "Black hole" register delete
 nnoremap <leader>d "_d
@@ -129,6 +130,8 @@ xnoremap <leader>p "_dP
 
 " Copy visual mode to system clipboard with Ctrl+C
 vnoremap <C-c> "+y
+nnoremap <leader>Y "+Y
+vnoremap <leader>y "+y
 
 " Undotree toggle
 nnoremap <leader>u :UndotreeToggle<CR>
