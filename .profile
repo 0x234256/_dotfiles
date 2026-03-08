@@ -28,8 +28,8 @@ fi
 
 source $HOME/.alias
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 # Configure Lang in ssh
 if [[ -z "$LANG" ]]; then

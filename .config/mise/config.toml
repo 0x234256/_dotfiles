@@ -1,0 +1,21 @@
+[tools]
+node = "25"
+go = "1.25"
+
+"aqua:LuaLS/lua-language-server" = "latest"
+"npm:yaml-language-server" = "latest"
+"aqua:tamasfe/taplo" = "latest"
+"npm:@vtsls/language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
+
+"npm:tree-sitter-cli" = "latest"
+"aqua:neovim/neovim" = "latest"
+
+"npm:@mariozechner/pi-coding-agent" = "latest"
+
+"aqua:JohnnyMorganz/StyLua" = "latest"
+"npm:prettier" = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = []
+experimental = true

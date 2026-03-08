@@ -47,9 +47,9 @@ alias gpt="git push; git push --tags"
 alias grb="git branch --sort=committerdate | tail -10 | more"
 
 # Apps
-alias n='vim'
-alias v='vim'
-alias nvim='vim'
+alias n='nvim'
+alias v='nvim'
+alias vim='nvim'
 # Utils
 #alias cat='bat'
 alias md=mkdir
@@ -66,3 +66,8 @@ function tmux-project {
     tmux new-session -s "$name"
   fi
 }
+
+alias watchtower="docker run --rm \
+  -e DOCKER_API_VERSION=1.44 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  containrrr/watchtower --run-once"
